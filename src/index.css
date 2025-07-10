@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+    --tilesize: 4rem;
+  }
+
+@theme {
+  --color-brass:  	#C88A65;
+  --color-lumber: #FFE4CD;
+}
+
+*{
+  @apply m-0 p-0 bg-neutral-800 text-lumber
+}
+
+.board{
+  @apply grid h-128 w-128 mt-50
+  [grid-template-columns:calc(.25+var(--tilesize))]
+}
+
+.ranks {
+  @apply flex flex-col justify-between pt-4 pb-4 pr-1 items-center text-center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 9; 
+}
+
+
+.files {
+  @apply flex justify-between items-center pl-6 pr-6;
+  grid-column: 2 / 10;
+  grid-row: 9 / 10; 
+}
+
+.tiles {
+  @apply grid w-[calc(8*var(--tilesize))] 
+    [grid-template-columns:repeat(8,_var(--tilesize))] 
+    [grid-template-rows:repeat(8,_var(--tilesize))]
+    text-center 
+}
+
+
+.app{
+  @apply grid content-center place-items-center text-center
+}
+
+
+.light-tile{
+  @apply bg-lumber
+}
+
+.dark-tile{
+  @apply bg-brass
+}
