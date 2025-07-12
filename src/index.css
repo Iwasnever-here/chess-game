@@ -63,6 +63,7 @@ body {
 
 .pieces{
   @apply absolute m-0 mb-[calc(.25*var(--tilesize))] ml-[calc(.25*var(--tilesize))] top-0 left-0 absolute
+  w-full h-full z-20
 }
 
 .piece{
