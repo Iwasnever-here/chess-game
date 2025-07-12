@@ -8,7 +8,7 @@ const Board = () => {
     const getClassName = (i,j) => {
         let x = ''
         x += (i+j) % 2 === 0 ? 'dark-tile' : 'light-tile'
-        console.log(x)
+        //console.log(x)
         return x
     }
 

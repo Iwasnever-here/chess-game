@@ -19,7 +19,7 @@ body {
 
 
 .board{
-  @apply grid h-128 w-128 mt-50 relative
+  @apply grid h-128 w-128 mt-70 relative 
   [grid-template-columns:calc(.25+var(--tilesize))]
 }
 
@@ -68,7 +68,7 @@ body {
 
 .piece{
   background-size: 100%;
-  @apply w-16 h-16 z-30 absolute
+  @apply w-16 h-16  absolute
   
 }
 

@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Piece = ({rank, file, piece}) => {
+const Piece = ({rank, file, piece, turn}) => {
     
   const onDragStart = (e) => {
+    const pieceColor = piece[0]
+    if(pieceColor !== turn) {
+      e.prevenDefault();
+      return;
+    }
     e.dataTransfer.effectAllowed = 'move'
     e.dataTransfer.setData('text/plain',`${piece}, ${rank}, ${file}` )
     setTimeout(() => {

@@ -7,6 +7,8 @@ const Pieces = () => {
     const ref = useRef()
 
     const [state,setState] = useState(createPosition())
+    const [turn, setTurn] = useState('w')
+
 
     const calculateCoord = (e) => {
       const {width,left,top} = ref.current.getBoundingClientRect()
@@ -28,6 +30,7 @@ const Pieces = () => {
       newPosition[x][y] = p
 
       setState(newPosition)
+      setTurn(turn === 'w' ? 'b' : 'w');
     }
 
     const onDragOver = (e) => e.preventDefault()
@@ -42,6 +45,7 @@ const Pieces = () => {
         rank = {rank}
         file = {file}
         piece = {state[rank][file]}
+        turn = {turn}
     /> :
     null))}
     </div>
