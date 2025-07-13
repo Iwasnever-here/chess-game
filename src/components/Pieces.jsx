@@ -2,12 +2,12 @@ import Piece from './Piece'
 import {useState, useRef} from 'react'
 import { createPosition, copyPosition } from './helper'
 
-const Pieces = () => {
+const Pieces = ({turn, setTurn}) => {
 
     const ref = useRef()
 
     const [state,setState] = useState(createPosition())
-    const [turn, setTurn] = useState('w')
+    //const [turn, setTurn] = useState('w')
 
 
     const calculateCoord = (e) => {

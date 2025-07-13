@@ -3,7 +3,7 @@ import Ranks from './Ranks'
 import Files from './Files'
 import Pieces from './Pieces'
 
-const Board = () => {
+const Board = ({turn, setTurn}) => {
 
     const getClassName = (i,j) => {
         let x = ''
@@ -14,6 +14,9 @@ const Board = () => {
 
     const ranks =Array(8).fill().map((x,i) => 8-i)
      const files =Array(8).fill().map((x,i) => i+1)
+
+
+    
   return (
     <div className='board'>
 
@@ -29,7 +32,7 @@ const Board = () => {
             
 
         </div>
-        <Pieces />
+        <Pieces turn = {turn} setTurn = {setTurn}/>
 
         <Files files = {files} />
         

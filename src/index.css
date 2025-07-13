@@ -19,7 +19,7 @@ body {
 
 
 .board{
-  @apply grid h-128 w-128 mt-70 relative 
+  @apply grid h-128 w-128 mt-5 relative 
   [grid-template-columns:calc(.25+var(--tilesize))]
 }
 
@@ -156,3 +156,9 @@ body {
 .piece.p-50 {transform: translate(500%,700%);}
 .piece.p-60 {transform: translate(600%,700%);}
 .piece.p-70 {transform: translate(700%,700%);}
+
+
+
+.turnBox {
+  @apply mt-50 text-2xl
+}
